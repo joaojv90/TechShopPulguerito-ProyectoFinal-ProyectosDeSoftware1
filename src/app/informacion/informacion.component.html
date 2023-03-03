@@ -1,0 +1,25 @@
+<div class="container" >
+  <h2 style="text-align: center"><strong>INFORMACIÓN DE LOS PRODUCTOS</strong></h2><br>          
+  <table class="table" >
+    <thead>
+      <tr>
+        <th style="border-color: black">ID: </th>
+        <th style="border-color: black">Nombre: </th>
+         <th style="border-color: black">Género: </th>
+        <th style="border-color: black">Email: </th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let item of productos">
+        <td style="border-color: black">{{item.id}}</td>
+        <td style="border-color: black">{{item.name}}</td>
+        <td style="border-color: black">{{item.gender}}</td>
+        <td style="border-color: black">{{item.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</div>
+
+
+

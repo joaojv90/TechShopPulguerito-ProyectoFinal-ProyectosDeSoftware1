@@ -1,0 +1,123 @@
+<div class="container" >
+  <h2 style="text-align: center"><strong>PRODUCTOS EN STOCK</strong></h2><br>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of productos">
+      <div class="thumbnail">
+        <br>
+        <a href="{{item.picture.medium}}" target="_blank">
+          <img src={{item.picture.medium}} class="imagen">
+        </a>
+          <div class="caption">
+            <h4><strong>Nombre: </strong>{{item.name}} </h4>
+            <h4><strong>País: </strong>{{item.location.country}}</h4>
+            <h4><strong>Teléfono: </strong>{{item.phone}}</h4>
+          </div>
+          <div style="text-align: center">
+          <button class="btnActualizar" data-toggle="modal" data-target="#btnModalActualizar">Actualizar</button>   
+          <button style="margin-left: 10px" class="btnEliminar" data-toggle="modal" data-target="#btnModalEliminar">Eliminar</button>  
+          </div> 
+        <br>
+      </div>
+    
+    </div>    
+  </div>
+
+
+  <!-- Modal Actualizar -->
+<div id="btnModalActualizar" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title"><strong>ACTUALIZACIÓN DE PRODUCTOS</strong></h3>
+      </div>
+      <div class="modal-body">
+
+      <div style="text-align: center">
+          <h4><strong>ID: </strong><input type="text" #idA></h4>
+          <h4><strong>Nombre: </strong><input type="text" #nomA></h4>
+          <h4><strong>Correo: </strong><input type="text" #emailA></h4>
+
+      <input class="btnVarios" type="submit" (click)="actualizacionProductos(
+          idA.value,
+          nomA.value,
+          emailA.value
+      )">
+      </div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btnCerrar" data-dismiss="modal">Salir</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Modal Eliminar -->
+<div id="btnModalEliminar" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title">Eliminación de productos</h3>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center">
+      <h4>Se encuentra seguro de eliminar el producto? <input type="text" #id></h4>
+      <input class="btnVarios" type="submit" (click)="eliminarProductos(id.value)">
+</div>
+      </div>
+      <div class="modal-footer">
+        <button class="btnCerrar" data-dismiss="modal">Salir</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br>
+<div style="text-align: center">
+<button class="btnIngresar" data-toggle="modal" data-target="#btnModalInsertar">Ingresar un nuevo producto</button>  
+</div> 
+
+<!-- Modal Insertar -->
+<div id="btnModalInsertar" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title"><strong>INGRESO DE PRODUCTOS</strong></h3>
+            </div>
+            <div class="modal-body">
+
+              <div style="text-align: center">
+                  <h4><strong>Nombre: </strong><input type="text" #nom></h4>
+                  <h4><strong>Género: </strong><input type="text" #genero></h4>
+                  <h4><strong>Correo: </strong><input type="text" #email></h4>
+
+              <input class="btnVarios" type="submit" (click)="ingresarProductos(
+                  nom.value,
+                  genero.value,
+                  email.value
+              )">
+              </div>
+              <br>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btnCerrar" data-dismiss="modal">Salir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
