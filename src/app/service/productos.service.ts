@@ -7,30 +7,25 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductosService {
 
-  private API_PERSONAL = "http://localhost:3000/results";
+  private API_PRODUCTOS = "http://localhost:3000/results";
 
   constructor(private http: HttpClient) { }
 
-  // GET - PERSONAL
   getProductos(): Observable<any> {
-    return (this.http.get(this.API_PERSONAL))
+    return this.http.get(this.API_PRODUCTOS)
   }
 
-  // POST - NOSOTROS
-  postProductos(trabajador: any): Observable<any> {
-    return (this.http.post(this.API_PERSONAL, trabajador))
+  addProductos(product: any): Observable<any> {
+    return (this.http.post(this.API_PRODUCTOS, product))
   }
 
-  // PUT - NOSOTROS
-  putProductos(user: any, ide: any): Observable<any> {
-    this.API_PERSONAL = `${this.API_PERSONAL}/${ide}`
-    return (this.http.put(this.API_PERSONAL, user))
+  updateProductos(producto: any): Observable<any> {
+    this.API_PRODUCTOS = `${this.API_PRODUCTOS}/${producto.id}`
+    return this.http.put(this.API_PRODUCTOS, producto)
   }
-
-  // DELETE - NOSOTROS
   deleteProductos(id: any): Observable<any> {
-    this.API_PERSONAL = `${this.API_PERSONAL}/${id}`
-    return (this.http.delete(this.API_PERSONAL, id))
+    this.API_PRODUCTOS = `${this.API_PRODUCTOS}/${id}`
+    return this.http.delete(this.API_PRODUCTOS)
   }
 
 }

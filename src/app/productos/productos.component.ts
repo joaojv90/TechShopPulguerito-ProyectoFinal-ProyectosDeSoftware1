@@ -20,45 +20,53 @@ export class ProductosComponent {
 
   // INGRESO / CREACIÓN DE PRODUCTOS
 
-  ingresarProductos(nom: String, genero: string, mail: String) {
+  ingresarProductos(idI: any, imgI: any, nameI: any, marcaI: any, preferenciaI: any, estadoI: any,
+    descripI: any, contactI: any, ciudadI: any) {
 
     const productos =
     {
-      name: nom,
-      gender: genero,
-      email: mail
+      id: idI,
+      imagen: imgI,
+      nombre: nameI,
+      marca: marcaI,
+      preferencia_de_cambio: preferenciaI,
+      estado: estadoI,
+      descripcion: descripI,
+      contacto: contactI,
+      ciudad: ciudadI
 
     }
 
-    this.servicio.postProductos(productos).subscribe(p => {
+    this.servicio.addProductos(productos).subscribe(p => {
 
     })
   }
 
   // ACTUALIZACIÓN DE PRODUCTOS
 
-  actualizacionProductos(ide: String, nom: String, mail: String) {
+  actualizacionProductos(idP: any, img: any, name: any, marca: any, preferencia: any, estado:any,
+    descrip: any, contact: any, ciudad:any) {
 
     const productos =
     {
-      id: ide,
-      name: nom,
-      email: mail
+      id: idP,
+      imagen: img,
+      nombre: name,
+      marca: marca,
+      preferencia_de_cambio: preferencia,
+      estado: estado,
+      descripcion: descrip,
+      contacto: contact,
+      ciudad: ciudad
     }
 
-    this.servicio.putProductos(productos, ide).subscribe(p => {
-
-    })
+    this.servicio.updateProductos(productos).subscribe(p => {})
   }
 
   // ELIMINAR PRODUCTOS
 
-  eliminarProductos(id: any) {
-
-    const productos =
-
-      this.servicio.deleteProductos(id).subscribe(p => {
-
-      })
+  remove(id: any) {
+    this.servicio.deleteProductos(id).subscribe(p => {})
+    window.location.reload()
   }
 }

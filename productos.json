@@ -440,55 +440,6 @@
         "thumbnail": "https://randomuser.me/api/portraits/thumb/men/68.jpg"
       },
       "nat": "NL"
-    },
-    {
-      "gender": "male",
-      "name": "Karl-Georg Bausch",
-      "location": {
-        "street": {
-          "number": 124,
-          "name": "Blumenstraße"
-        },
-        "city": "Bamberg",
-        "state": "Hessen",
-        "country": "Germany",
-        "postcode": 21895,
-        "coordinates": {
-          "latitude": "21.2540",
-          "longitude": "134.4007"
-        },
-        "timezone": {
-          "offset": "-4:00",
-          "description": "Atlantic Time (Canada), Caracas, La Paz"
-        }
-      },
-      "email": "karl-georg.bausch@example.com",
-      "login": {
-        "uuid": "50faffdb-4e02-46bc-bbed-62ec730d688e",
-        "username": "ticklishfrog293",
-        "password": "chargers",
-        "salt": "xbwcMAtY",
-        "md5": "e299e587cd7430763e735096a48f5843",
-        "sha1": "cd4dc20ec78e8c47f80c9d4370b37610f918fc3a",
-        "sha256": "344aa756681a0b067308e6086e36880d7595401c3c6f0b2e7b4753dde1ec8639"
-      },
-      "dob": {
-        "date": "1986-08-18T03:41:11.781Z",
-        "age": 36
-      },
-      "registered": {
-        "date": "2012-12-23T08:52:23.593Z",
-        "age": 10
-      },
-      "phone": "0150-0976125",
-      "cell": "0170-5500844",
-      "id": "YUEQ",
-      "picture": {
-        "large": "https://randomuser.me/api/portraits/men/30.jpg",
-        "medium": "https://randomuser.me/api/portraits/med/men/30.jpg",
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/30.jpg"
-      },
-      "nat": "DE"
     }
   ]
 }
