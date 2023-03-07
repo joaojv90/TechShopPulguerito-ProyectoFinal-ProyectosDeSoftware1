@@ -22,30 +22,32 @@ export class ProductosComponent {
 
   ingresarProductos(idI: any, imgI: any, nameI: any, marcaI: any, preferenciaI: any, estadoI: any,
     descripI: any, contactI: any, ciudadI: any) {
+    if (idI == "" || imgI == "") {
+      alert("No se puede ingresar un producto con campos vacíos")
+    } else {
+      const productos =
+      {
+        id: idI,
+        imagen: imgI,
+        nombre: nameI,
+        marca: marcaI,
+        preferencia_de_cambio: preferenciaI,
+        estado: estadoI,
+        descripcion: descripI,
+        contacto: contactI,
+        ciudad: ciudadI
+      }
 
-    const productos =
-    {
-      id: idI,
-      imagen: imgI,
-      nombre: nameI,
-      marca: marcaI,
-      preferencia_de_cambio: preferenciaI,
-      estado: estadoI,
-      descripcion: descripI,
-      contacto: contactI,
-      ciudad: ciudadI
-
+      this.servicio.addProductos(productos).subscribe(p => { })
+      alert("Producto agregado!!!")
+      window.location.reload()
     }
-
-    this.servicio.addProductos(productos).subscribe(p => {})
-    alert("Producto agregado!!!")
-    window.location.reload()
   }
 
   // ACTUALIZACIÓN DE PRODUCTOS
 
-  actualizacionProductos(idP: any, img: any, name: any, marca: any, preferencia: any, estado:any,
-    descrip: any, contact: any, ciudad:any) {
+  actualizacionProductos(idP: any, img: any, name: any, marca: any, preferencia: any, estado: any,
+    descrip: any, contact: any, ciudad: any) {
 
     const productos =
     {
@@ -60,13 +62,13 @@ export class ProductosComponent {
       ciudad: ciudad
     }
 
-    this.servicio.updateProductos(productos).subscribe(p => {})
+    this.servicio.updateProductos(productos).subscribe(p => { })
   }
 
   // ELIMINAR PRODUCTOS
 
   remove(id: any) {
-    this.servicio.deleteProductos(id).subscribe(p => {})
+    this.servicio.deleteProductos(id).subscribe(p => { })
     alert("Producto Eliminado")
     window.location.reload()
   }

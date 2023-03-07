@@ -15,7 +15,7 @@
           <h6><strong>Teléfono: </strong>{{item.contacto}}</h6>
         </div>
         <div style="text-align: center">
-          <button class="btn btn-warning" routerLink="/modal/{{item.id}}">Actualizar</button>
+          <button class="btn btn-warning" data-toggle="modal" data-target="#btnModalActualizar">Actualizar</button>
           <button style="margin-left: 10px" class="btnEliminar" 
           class="btn btn-danger" (click)="remove(item.id)">Eliminar</button>
         </div>
@@ -39,16 +39,33 @@
         <div class="modal-body">
 
           <div style="text-align: center">
-            <h4><strong>ID: </strong><input type="text" #idP placeholder="ID"></h4>
-            <h4><strong>Imagen: </strong><input type="text" #img placeholder="link de la imagen"></h4>
-            <h4><strong>Nombre: </strong><input type="text" #name placeholder="Tipo de producto"></h4>
-            <h4><strong>Marca: </strong><input type="text" #marca placeholder="Marca y modelo"></h4>
+            <h4><strong>ID: </strong>
+              <input type="text" #idP placeholder="{{productos.id}}">
+            </h4>
+            <h4><strong>Imagen: </strong>
+              <input type="text" #img placeholder="{{productos.imagen}}">
+            </h4>
+            <h4><strong>Nombre: </strong>
+              <input type="text" #name placeholder="{{productos.nombre}}">
+            </h4>
+            <h4><strong>Marca: </strong>
+              <input type="text" #marca placeholder="{{productos.marca}}">
+            </h4>
             <h4><strong>Preferencia de cambio: </strong><input type="text" #preferencia
-                placeholder="Lo que quiere recibir"></h4>
-            <h4><strong>Estado: </strong><input type="text" #estado placeholder="De 1 al 10"></h4>
-            <h4><strong>Descripción: </strong><input type="textarea" #descrip placeholder="Detalle del producto"></h4>
-            <h4><strong>Contacto: </strong><input type="text" #contact placeholder="Teléfono"></h4>
-            <h4><strong>Ciudad: </strong><input type="text" #ciudad placeholder="Donde se ubica"></h4>
+                placeholder="{{productos.preferencia_de_cambio}}">
+              </h4>
+            <h4><strong>Estado: </strong>
+              <input type="text" #estado placeholder="{{productos.estado}}">
+            </h4>
+            <h4><strong>Descripción: </strong>
+              <input type="textarea" #descrip placeholder="{{productos.descripcion}}">
+            </h4>
+            <h4><strong>Contacto: </strong>
+              <input type="text" #contact placeholder="{{productos.contacto}}">
+            </h4>
+            <h4><strong>Ciudad: </strong>
+              <input type="text" #ciudad placeholder="{{productos.ciudad}}">
+            </h4>
             <input class="btnVarios" type="submit" (click)="actualizacionProductos(
           idP.value,
           img.value,
