@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="container">
+        <h2>Editar</h2>
+        <form class="form-inline" action="/action_page.php">
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="text" class="form-control" value={{productos[id-1].id}} #idA>
+            </div>
+            <div class="form-group">
+                <label for="">Nombre:</label>
+                <input type="text" class="form-control" value={{productos[id-1].imagen}} #imgA>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="text" class="form-control" value={{productos[id-1].nombre}} #nameA>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="text" class="form-control" value={{productos[id-1].marca}} #marcaA>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Imagen:</label>
+                <input type="text" class="form-control" value={{productos[id-1].preferencia}} #preferenciaA>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Imagen:</label>
+                <input type="text" class="form-control" value={{productos[id-1].estado}} #estadoA>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Imagen:</label>
+                <input type="text" class="form-control" value={{productos[id-1].descripcion}} #descripA>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Imagen:</label>
+                <input type="text" class="form-control" value={{productos[id-1].contacto}} #contactA>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Imagen:</label>
+                <input type="text" class="form-control" value={{productos[id-1].ciudad}} #ciudadA>
+            </div>
+            <br><br>
+            <button type="button" class="btn btn-warning" (click)="actualizacionProductos(
+                    idA.value,
+                    imgA.value,
+                    nameA.value,
+                    marcaA.value,
+                    preferenciaA.value,
+                    estadoA.value,
+                    descripA.value,
+                    contactA.value,
+                    ciudadA.value
+                    )"><a href="/productos">ACTUALIZAR</a></button>
+        </form>
+    </div>
+</div>

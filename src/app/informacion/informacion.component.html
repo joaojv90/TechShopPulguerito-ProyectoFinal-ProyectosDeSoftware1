@@ -1,20 +1,28 @@
 <div class="container" >
   <h2 style="text-align: center"><strong>INFORMACIÓN DE LOS PRODUCTOS</strong></h2><br>          
-  <table class="table" >
+  <table class="table table-hover">
     <thead>
       <tr>
         <th style="border-color: black">ID: </th>
         <th style="border-color: black">Nombre: </th>
-         <th style="border-color: black">Género: </th>
-        <th style="border-color: black">Email: </th>
+        <th style="border-color: black">Marca: </th>
+        <th style="border-color: black">Preferencia: </th>
+        <th style="border-color: black">Estado: </th>
+        <th style="border-color: black">Descripción: </th>
+        <th style="border-color: black">Contacto: </th>
+        <th style="border-color: black">Ciudad: </th>
       </tr>
     </thead>
     <tbody >
       <tr *ngFor="let item of productos">
         <td style="border-color: black">{{item.id}}</td>
-        <td style="border-color: black">{{item.name}}</td>
-        <td style="border-color: black">{{item.gender}}</td>
-        <td style="border-color: black">{{item.email}}</td>
+        <td style="border-color: black"><b>{{item.nombre}}</b></td>
+        <td style="border-color: black">{{item.marca}}</td>
+        <td style="border-color: black">{{item.preferencia}}</td>
+        <td style="border-color: black">{{item.estado}}</td>
+        <td style="border-color: black">{{item.descripcion}}</td>
+        <td style="border-color: black">{{item.contacto}}</td>
+        <td style="border-color: black">{{item.ciudad}}</td>
       </tr>
     </tbody>
   </table>

@@ -37,9 +37,9 @@ export class ProductosComponent {
 
     }
 
-    this.servicio.addProductos(productos).subscribe(p => {
-
-    })
+    this.servicio.addProductos(productos).subscribe(p => {})
+    alert("Producto agregado!!!")
+    window.location.reload()
   }
 
   // ACTUALIZACIÓN DE PRODUCTOS
@@ -67,6 +67,7 @@ export class ProductosComponent {
 
   remove(id: any) {
     this.servicio.deleteProductos(id).subscribe(p => {})
+    alert("Producto Eliminado")
     window.location.reload()
   }
 }

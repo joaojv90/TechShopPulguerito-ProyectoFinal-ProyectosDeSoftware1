@@ -4,16 +4,18 @@
     <div class="col-md-4" *ngFor="let item of productos">
       <div class="thumbnail">
         <br>
-        <a href="{{item.picture.medium}}" target="_blank">
-          <img src={{item.picture.medium}} class="imagen" alt="imagen_de_producto">
+        <a href="{{item.imagen}}" target="_blank">
+          <img src={{item.imagen}} class="imagen" alt="imagen_de_producto">
         </a>
         <div class="caption">
-          <h4><strong>Nombre: </strong>{{item.name}} </h4>
-          <h4><strong>País: </strong>{{item.location.country}}</h4>
-          <h4><strong>Teléfono: </strong>{{item.phone}}</h4>
+          <h6><strong>Nombre: </strong>{{item.nombre}} </h6>
+          <h6><strong>Marca: </strong>{{item.marca}}</h6>
+          <h6><strong>Estado: </strong>{{item.estado}}</h6>
+          <h6><strong>Cambio por: </strong>{{item.preferencia}}</h6>
+          <h6><strong>Teléfono: </strong>{{item.contacto}}</h6>
         </div>
         <div style="text-align: center">
-          <button class="btnActualizar" data-toggle="modal" data-target="#btnModalActualizar">Actualizar</button>
+          <button class="btn btn-warning" routerLink="/modal/{{item.id}}">Actualizar</button>
           <button style="margin-left: 10px" class="btnEliminar" 
           class="btn btn-danger" (click)="remove(item.id)">Eliminar</button>
         </div>
