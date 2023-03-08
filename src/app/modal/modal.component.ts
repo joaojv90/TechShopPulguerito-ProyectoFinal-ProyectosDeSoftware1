@@ -35,7 +35,7 @@ export class ModalComponent {
       imagen: img,
       nombre: name,
       marca: marca,
-      preferencia_de_cambio: preferencia,
+      preferencia: preferencia,
       estado: estado,
       descripcion: descrip,
       contacto: contact,

@@ -16,8 +16,8 @@
         </div>
         <div style="text-align: center">
           <button class="btn btn-warning" data-toggle="modal" data-target="#btnModalActualizar">Actualizar</button>
-          <button style="margin-left: 10px" class="btnEliminar" 
-          class="btn btn-danger" (click)="remove(item.id)">Eliminar</button>
+          <button style="margin-left: 10px" class="btnEliminar" class="btn btn-danger"
+            (click)="remove(item.id)">Eliminar</button>
         </div>
         <br>
       </div>
@@ -29,7 +29,6 @@
   <!-- Modal Actualizar -->
   <div id="btnModalActualizar" class="modal fade" role="dialog">
     <div class="modal-dialog">
-
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
@@ -37,34 +36,36 @@
           <h3 class="modal-title"><strong>ACTUALIZACIÓN DE PRODUCTOS</strong></h3>
         </div>
         <div class="modal-body">
-
+          <script>
+               
+            </script>         
           <div style="text-align: center">
             <h4><strong>ID: </strong>
-              <input type="text" #idP placeholder="{{productos.id}}">
+              <input type="text" #idP value="{{productos[0].id}}">
             </h4>
             <h4><strong>Imagen: </strong>
-              <input type="text" #img placeholder="{{productos.imagen}}">
+              <input type="text" #img value="{{productos[0].imagen}}">
             </h4>
             <h4><strong>Nombre: </strong>
-              <input type="text" #name placeholder="{{productos.nombre}}">
+              <input type="text" #name value="{{productos[0].nombre}}">
             </h4>
             <h4><strong>Marca: </strong>
-              <input type="text" #marca placeholder="{{productos.marca}}">
+              <input type="text" #marca value="{{productos[0].marca}}">
             </h4>
             <h4><strong>Preferencia de cambio: </strong><input type="text" #preferencia
-                placeholder="{{productos.preferencia_de_cambio}}">
-              </h4>
+                value="{{productos[0].preferencia}}">
+            </h4>
             <h4><strong>Estado: </strong>
-              <input type="text" #estado placeholder="{{productos.estado}}">
+              <input type="text" #estado value="{{productos[0].estado}}">
             </h4>
             <h4><strong>Descripción: </strong>
-              <input type="textarea" #descrip placeholder="{{productos.descripcion}}">
+              <input type="textarea" #descrip value="{{productos[0].descripcion}}">
             </h4>
             <h4><strong>Contacto: </strong>
-              <input type="text" #contact placeholder="{{productos.contacto}}">
+              <input type="text" #contact value="{{productos[0].contacto}}">
             </h4>
             <h4><strong>Ciudad: </strong>
-              <input type="text" #ciudad placeholder="{{productos.ciudad}}">
+              <input type="text" #ciudad value="{{productos[0].ciudad}}">
             </h4>
             <input class="btnVarios" type="submit" (click)="actualizacionProductos(
           idP.value,
@@ -84,7 +85,6 @@
           <button class="btnCerrar" data-dismiss="modal">Salir</button>
         </div>
       </div>
-
     </div>
   </div>
   <br>
