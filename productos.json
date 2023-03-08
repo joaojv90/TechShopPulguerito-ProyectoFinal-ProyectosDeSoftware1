@@ -5,8 +5,8 @@
       "imagen": "https://sistemasyprogramas.com/9117-large_default/audifono-microfono-logitech-alambrico-gamer-g-pro-x.jpg",
       "nombre": "Audifonos",
       "marca": "Logitech",
-      "preferencia": "mouse corseir",
-      "estado": "9",
+      "preferencia": "iphone",
+      "estado": "6",
       "descripcion": "Audifonos logitech G pro X, un año de uso, entrego con su respectiva caja.",
       "contacto": "123456",
       "ciudad": "Ibarra"
@@ -82,11 +82,11 @@
       "imagen": "https://s1.eestatic.com/2022/08/24/actualidad/697940615_226643954_1024x576.jpg",
       "nombre": "Palanca PS5",
       "marca": "Sony",
-      "preferencia": "Audifonos inalambricos",
+      "preferencia": "camara para play",
       "estado": "10",
-      "descripcion": "Palanca de PS5 para PC o PS5, como nueva 2 semanas de uso.",
-      "contacto": "135790",
-      "ciudad": "Cuenca"
+      "descripcion": "palanca de play 5",
+      "contacto": "4516816818",
+      "ciudad": "Quito"
     },
     {
       "id": "10",
@@ -98,17 +98,6 @@
       "descripcion": "Teclado logitech G pro X, tres meses de uso, todos las teclas y su iluminacion funcionan correctamente.",
       "contacto": "864210",
       "ciudad": "Quito"
-    },
-    {
-      "id": "12",
-      "imagen": "https://www.zdnet.com/a/img/2020/11/22/ca2302cc-c59f-4ae2-9091-6340e4f120e3/iphone-12-mini1.jpg",
-      "nombre": "Iphone 12",
-      "marca": "Apple",
-      "preferencia_de_cambio": "Samsung s20",
-      "estado": "9",
-      "descripcion": "Iphone 12 pro 256gb",
-      "contacto": "45651781",
-      "ciudad": "Ambato"
     }
   ]
 }

@@ -8,7 +8,6 @@ import { Error404Component } from './error404/error404.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductosComponent } from './productos/productos.component';
 import { ContactosComponent } from './contactos/contactos.component';
-import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { ModalComponent } from './modal/modal.component';
     InformacionComponent,
     Error404Component,
     ProductosComponent,
-    ContactosComponent,
-    ModalComponent
+    ContactosComponent
   ],
 
   imports: [

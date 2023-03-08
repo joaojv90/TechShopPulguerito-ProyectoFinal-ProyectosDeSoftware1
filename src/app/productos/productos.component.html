@@ -15,7 +15,8 @@
           <h6><strong>Teléfono: </strong>{{item.contacto}}</h6>
         </div>
         <div style="text-align: center">
-          <button class="btn btn-warning" data-toggle="modal" data-target="#btnModalActualizar">Actualizar</button>
+          <button class="btn btn-warning" data-toggle="modal" 
+          data-target="#btnModalActualizar" value="{{item.id}}">Actualizar</button>
           <button style="margin-left: 10px" class="btnEliminar" class="btn btn-danger"
             (click)="remove(item.id)">Eliminar</button>
         </div>
@@ -24,21 +25,16 @@
 
     </div>
   </div>
-
-
-  <!-- Modal Actualizar -->
+  
   <div id="btnModalActualizar" class="modal fade" role="dialog">
     <div class="modal-dialog">
-      <!-- Modal content-->
+      
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h3 class="modal-title"><strong>ACTUALIZACIÓN DE PRODUCTOS</strong></h3>
         </div>
-        <div class="modal-body">
-          <script>
-               
-            </script>         
+        <div class="modal-body">       
           <div style="text-align: center">
             <h4><strong>ID: </strong>
               <input type="text" #idP value="{{productos[0].id}}">
@@ -87,11 +83,12 @@
       </div>
     </div>
   </div>
+
   <br>
+
   <div style="text-align: center">
     <button class="btnIngresar" data-toggle="modal" data-target="#btnModalInsertar">Ingresar un nuevo producto</button>
   </div>
-
   <!-- Modal Insertar -->
   <div id="btnModalInsertar" class="modal fade" role="dialog">
     <div class="modal-dialog">
